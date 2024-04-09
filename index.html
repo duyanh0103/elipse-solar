@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background:linear-gradient(to bottom, #1e1e1e, #000000) ;
+            margin: 0;
+        }
+        .wrapper{
+            position: relative;
+        }
+        .sun{
+            height: 40vh;
+            width: 40vh;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px -2px 50px 10px rgb(255 255 255);
+        }
+
+        .elipse{
+            height: 39vh;
+            width: 39vh;
+            background-color: black;
+            position: absolute;
+            border-radius: 50%;
+            animation: eclipseAnimation 7s linear infinite alternate;
+        }
+
+        @keyframes eclipseAnimation{
+            0% {
+                transform: translateX(80px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sun">
+            <div class="elipse"></div>
+        </div>
+    </div>
+</body>
+</html>
